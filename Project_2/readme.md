@@ -18,4 +18,4 @@ Working with one dataset: event_data. The directory of CSV files partitioned by 
 - Project_1B_ Project_Template.ipynb: 
     + process the event_datafile_new.csv dataset to create a denormalized dataset.
     + model the data tables.
-    + load the data into tables be created in Apache Cassandra and run the queries
+    + load the data into tables be created in Apache Cassandra and run the queries.
