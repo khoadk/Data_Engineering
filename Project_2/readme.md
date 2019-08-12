@@ -19,3 +19,5 @@ Working with one dataset: event_data. The directory of CSV files partitioned by 
     + process the event_datafile_new.csv dataset to create a denormalized dataset.
     + model the data tables.
     + load the data into tables be created in Apache Cassandra and run the queries.
+ 
+- Project2.tar.gz: Zip all files/data.
