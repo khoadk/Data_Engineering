@@ -15,7 +15,7 @@ We have provided you with a project template that takes care of all the imports 
 Working with one dataset: event_data. The directory of CSV files partitioned by date. Here are examples of filepaths to two files in the dataset: event_data/2018-11-08-events.cs
 
 ## Project Template:
-- Project_1B_ Project_Template.ipynb: 
+- Project_1B_ Project_Template.ipynb: Doing
     + process the event_datafile_new.csv dataset to create a denormalized dataset.
     + model the data tables.
     + load the data into tables be created in Apache Cassandra and run the queries.
