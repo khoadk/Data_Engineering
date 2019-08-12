@@ -1,0 +1,14 @@
+1. Changing: table names: 
+    - session_item.
+    - user_session.
+    - user_song.
+    
+2. Changing: The sequence of the columns in the CREATE and INSERT statements should follow the order of the COMPOSITE PRIMARY KEY and CLUSTERING columns. The data should be inserted and retrieved in the same order as how the COMPOSITE PRIMARY KEY is set up.  
+
+3. Changing: 
+    - PRIMARY KEY ((sessionId, itemInSession)) to uniquely identify each row.
+    - PRIMARY KEY ((userId, sessionId), itemInSession) to uniquely identify each row.
+
+4. Including a description of the query the data is modeled after: how based on the query you have built the table. How the primary keys are meant to work?
+
+5. Removing the TODOs texts.
