@@ -54,7 +54,7 @@ Using the song and event datasets, you'll need to create a star schema optimized
     + devops_iac: do configuration for redshift cluster.
     + working_etl: testing etl with single file before doing with many files in final app.
     
-## Sample queris for DWH:
+## Sample queries for DWH:
 --Count users playing the song 'Drillbit'
 
 SELECT count(user_id) FROM songs, songplays 
