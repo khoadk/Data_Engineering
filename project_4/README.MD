@@ -48,11 +48,11 @@ Using the song and log datasets, you'll need to create a star schema optimized f
     * *start_time, hour, day, week, month, year, weekday*
 
 ## Document
-### Purpose of this database in context of the startup, Sparkify, and their analytical goals
+- Purpose of this database in context of the startup, Sparkify, and their analytical goals
 
-### State and justify database schema design and ETL pipeline
+- State and justify database schema design and ETL pipeline
 
-### Provide example queries and results for song play analysis
+- Provide example queries and results for song play analysis
 
 
 
