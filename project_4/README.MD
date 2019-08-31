@@ -61,7 +61,7 @@ Using the song and log datasets, you'll need to create a star schema optimized f
     * *start_time, hour, day, week, month, year, weekday*
     
 ## Project Template
-- **brain_storm** folder: storing all files using for brain storm project like:
+- **brain_storm** folder: storing all files using for brain storm project:
    * *first_look_dataset*: connecting and wrangling the small local dataset with spark.
 
 ## Document
