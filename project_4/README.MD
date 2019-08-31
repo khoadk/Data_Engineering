@@ -1,5 +1,6 @@
 # Author: khoa.nguyen.acb@gmail.com
 # Project: Data Lake
+Building a data lake and an ETL pipeline in Spark that loads data from S3, processes the data in analystics tables, and load them back intoS3
 
 ## Introduction
 A music streaming startup, Sparkify, has grown their user base and song database even more and want to move their data warehouse to a data lake. Their data resides in S3, in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
