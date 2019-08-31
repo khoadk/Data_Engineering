@@ -26,3 +26,22 @@ The first dataset is a subset of real data from the Million Song Dataset. Each f
 
 And below is an example of what a single song file, TRAABJL12903CDCF1A.json, looks like.
 > {"num_songs": 1, "artist_id": "ARJIE2Y1187B994AB7", "artist_latitude": null, "artist_longitude": null, "artist_location": "", "artist_name": "Line Renaud", "song_id": "SOUPIRU12A6D4FA1E1", "title": "Der Kleine Dompfaff", "duration": 152.92036, "year": 0}.
+
+## Schema for Song Play Analysis
+Using the song and log datasets, you'll need to create a star schema optimized for queries on song play analysis. This includes the following tables.
+
+### Fact Table
+1. **songplays** - records in log data associated with song plays i.e. records with page > NextSong.
+    *songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent*
+
+
+
+
+
+
+
+
+
+
+
+
