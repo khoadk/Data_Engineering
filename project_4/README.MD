@@ -59,6 +59,10 @@ Using the song and log datasets, you'll need to create a star schema optimized f
     
 5. **time** - timestamps of records in songplays broken down into specific units
     * *start_time, hour, day, week, month, year, weekday*
+    
+## Project Template
+- **brain_storm** folder: storing all files using for brain storm project like:
+   * *first_look_dataset*: connecting and wrangling the small local dataset with spark.
 
 ## Document
 - Purpose of this database in context of the startup, Sparkify, and their analytical goals
