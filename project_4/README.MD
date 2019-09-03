@@ -63,7 +63,8 @@ Using the song and log datasets, you'll need to create a star schema optimized f
     
 ## Project Template
 - **brain_storm** folder: storing all files using for brain storm project:
-   * *first_look_dataset*: connecting and wrangling the small local dataset with spark.
+   * *first_look*: connecting and wrangling the small local dataset with spark.
+- **etl.py**: reads data from S3, processes that data using Spark, and writes them back to S3
 
 ## Document
 - Purpose of this database in context of the startup, Sparkify, and their analytical goals
