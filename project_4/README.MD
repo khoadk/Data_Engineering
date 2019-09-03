@@ -67,11 +67,7 @@ Using the song and log datasets, you'll need to create a star schema optimized f
 - **etl.py**: reads data from S3, processes that data using Spark, and writes them back to S3
 
 ## Document
-- Purpose of this database in context of the startup, Sparkify, and their analytical goals
-
-- State and justify database schema design and ETL pipeline
-
-- Provide example queries and results for song play analysis
+- **The primary benefit of a star schema is its simplicity for users to write, and databases to process: queries are written with simple inner joins between the facts and a small number of dimensions.**
 
 
 
