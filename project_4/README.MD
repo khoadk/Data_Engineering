@@ -77,9 +77,23 @@ Using the song and log datasets, you'll need to create a star schema optimized f
     .dropDuplicates() \
     .count()
  
- **55**
+ ==> **55**
 
-
+2. How many songs were played from the most played artist?
+> songplays_table.select('artist_id') \
+    .groupBy('artist_id') \
+    .agg({'artist_id':'count'}) \
+    .withColumnRenamed('count(artist_id)', 'Artistcount') \
+    .sort(desc('Artistcount')) \
+    .show(3)
++------------------+-----------+
+|         artist_id|Artistcount|
++------------------+-----------+
+|AR5E44Z1187B9A1D74|         37|
+|ARXYBIB1187FB519B0|         17|
+|ARNRA801187FB5587A|         13|
++------------------+-----------+  
+ 
 
 
 
