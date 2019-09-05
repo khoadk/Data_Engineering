@@ -86,7 +86,7 @@ Using the song and log datasets, you'll need to create a star schema optimized f
     .withColumnRenamed('count(artist_id)', 'Artistcount') \
     .sort(desc('Artistcount')) \
     .show(3)
-    
+>    
 +------------------+-----------+
 |         artist_id|Artistcount|
 +------------------+-----------+
@@ -94,7 +94,8 @@ Using the song and log datasets, you'll need to create a star schema optimized f
 |ARXYBIB1187FB519B0|         17|
 |ARNRA801187FB5587A|         13|
 +------------------+-----------+  
- 
+>
+
 
 
 
