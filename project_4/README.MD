@@ -69,8 +69,15 @@ Using the song and log datasets, you'll need to create a star schema optimized f
 ## Document
 - **The primary benefit of a star schema is its simplicity for users to write, and databases to process: queries are written with simple inner joins between the facts and a small number of dimensions.**
 
+## Data Analyst:
 
-
+1. How many female users do we have>
+> user_table.filter(user_table.gender == 'F') \
+    .select('user_id', 'gender') \
+    .dropDuplicates() \
+    .count()
+ 
+ **55**
 
 
 
