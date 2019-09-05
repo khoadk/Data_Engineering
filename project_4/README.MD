@@ -89,9 +89,9 @@ Using the song and log datasets, you'll need to create a star schema optimized f
 >    
 - artist_id Artistcount
 
-- AR5E44Z1187B9A1D74  37
-- ARXYBIB1187FB519B0  17
-- ARNRA801187FB5587A: 13 
+- AR5E44Z1187B9A1D74  **37**
+- ARXYBIB1187FB519B0  **17**
+- ARNRA801187FB5587A: **13** 
 >
 
 
