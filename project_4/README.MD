@@ -93,7 +93,7 @@ Using the song and log datasets, you'll need to create a star schema optimized f
 - ARNRA801187FB5587A:======> **13** 
 >
 
-## Instruction: Run etl.py. There is only one file. Many thanks. 
+## Instruction: There is only one file. Many thanks ^_^ 
 
 
 
