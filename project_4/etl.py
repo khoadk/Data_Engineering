@@ -1,6 +1,6 @@
-#import configparser
-#from datetime import datetime
-#import os
+import configparser
+from datetime import datetime
+import os
 #import glob
 from pyspark.sql import SparkSession
 import pyspark.sql.functions as F
@@ -8,6 +8,21 @@ from pyspark.sql.functions import udf, col
 from pyspark.sql.functions import year, month, dayofmonth, hour, weekofyear, date_format
 from pyspark.sql.types import StructType as R, StructField as Fld, DoubleType as Dbl, StringType as Str, IntegerType as Int, DateType as Date, TimestampType
 from pyspark.sql.functions import monotonically_increasing_id
+
+config = configparser.ConfigParser()
+config.read('dl.cfg')
+
+os.environ['AWS_ACCESS_KEY_ID']=config['AWS']['AWS_ACCESS_KEY_ID']
+os.environ['AWS_SECRET_ACCESS_KEY']=config['AWS']['AWS_SECRET_ACCESS_KEY']
+
+
+def create_spark_session():
+    spark = SparkSession \
+        .builder \
+        .config("spark.jars.packages", "org.apache.hadoop:hadoop-aws:2.7.0") \
+        .getOrCreate()
+    return spark
+
 
 # def remane col names
 
@@ -65,6 +80,46 @@ def schema_song_data():
     except:
         print("schema_song_data function is successful created.")
         print("************************************************")
+        
+# def schema on read for log dataset
+
+def schema_log_data():
+    """
+    Description:
+        schema design for log dataset.
+    """
+    try:
+        print("schema_log_data function is starting.")
+        print("*************************************")
+        
+        schema = R([
+            Fld("artist",Str()),
+            Fld("auth",Str()),
+            Fld("firstName",Str()),
+            Fld("gender",Str()),
+            Fld("itemInSession",Int()),
+            Fld("lastName",Str()),
+            Fld("length",Dbl()),
+            Fld("level",Str()),
+            Fld("location",Str()),
+            Fld("method",Str()),
+            Fld("page",Str()),
+            Fld("registration",Int()),
+            Fld("sessionId",Int()),
+            Fld("song",Str()),
+            Fld("status",Str()),
+            Fld("ts",Int()), 
+            Fld("userAgent",Str()),
+            Fld("userId",Int())
+        ])
+        return schema
+        
+        print("Successfull schema design for log dataset.")
+        print("******************************************")
+             
+    except:
+        print("Unsuccessful schema design for log dataset.")
+        print("*******************************************")
 
 # def "process_song_data" elt for song datasets.
 
@@ -143,8 +198,8 @@ def process_log_data(spark, input_data, output_data):
 
     # read log data file
     #log_dataset_schema = schema_log_data()
-    #df = spark.read.json(log_data, schema = log_dataset_schema)
-    df = spark.read.json(log_data)
+    df = spark.read.json(log_data, schema = log_dataset_schema)
+    #df = spark.read.json(log_data)
     
     # filter by actions for song plays
     df = df.filter(df.page == "NextSong")
@@ -219,13 +274,11 @@ def process_log_data(spark, input_data, output_data):
     
     
 def main():
-    spark = SparkSession.builder.appName("data-lake").getOrCreate()
-    input_data = "s3://udacity-khoa-nguyen/data/"
-    #input_data = "s3://udacity-khoa-nguyen/data/"
+    spark = create_spark_session()
+    input_data = "s3a://udacity-dend/"
     output_data = "s3://udacity-khoa-nguyen/test_output/"
     #output_data = "s3://udacity-khoa-nguyen/udacity-data-lake/"
-    #input_data = os.getcwd() + "/data"
-    #output_data = os.getcwd() + "/output_data"
+
     
     process_song_data(spark, input_data, output_data)    
     process_log_data(spark, input_data, output_data)
