@@ -10,6 +10,9 @@ The source data resides in S3 and needs to be processed in Sparkify's data wareh
 ##  Dataset:
 - **Log data:** 
 >  s3://udacity-dend/log_data
+>  s3://udacity-dend/log_data/2018/11/2018-11-01-events.json
+>  ......................
+>  s3://udacity-dend/log_data/2018/11/2018-11-30-events.json
 - **Song data:** 
 > s3://udacity-dend/song_data
 
