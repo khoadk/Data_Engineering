@@ -27,7 +27,7 @@ The source data resides in S3 and needs to be processed in Sparkify's data wareh
 >  s3://udacity-dend/song_data/A/Z/Z/TRAZZXH128F933D2BA.json
 
 ## Project Template:
-- **list_key_dag:** Listing all keys in S3 bucket. It is firtlook for the datasets we are dealing with.
+- **list_keys_dag:** Listing all keys in S3 bucket. It is firtlook for the datasets we are dealing with.
 
 ## DAG:
 ![log data](pics/example-dag.png)
