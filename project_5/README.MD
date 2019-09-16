@@ -19,6 +19,12 @@ The source data resides in S3 and needs to be processed in Sparkify's data wareh
 
 - **Song data:** 
 > s3://udacity-dend/song_data
+>
+>  s3://udacity-dend/song_data/A/A/A/TRAAAAK128F9318786.json
+>
+>  ......................
+>
+>  s3://udacity-dend/song_data/A/Z/Z/TRAZZXH128F933D2BA.json
 
 ## Project Template:
 - **list_key_dag:** Listing all keys in S3 bucket. It is firtlook for the datasets we are dealing with.
