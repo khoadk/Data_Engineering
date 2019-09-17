@@ -38,7 +38,7 @@ The source data resides in S3 and needs to be processed in Sparkify's data wareh
 - **airflow/plugins/operators/stage_redshift.py:** Operator plugin to copy data from S3 to Redshift.
 - **airflow/plugins/helpers/sql_queries.py:** SQL commands to insert data from staging to fact/dimension tables.
 
-## Instruction:
+## Run Program:
 - Option: Run **list_keys_dag.py** to take a look at data struccture/ raw data from S3.
 - Run **sparkify_pipeline_dag.py** to do data pipeline/ETL from S3 to Redshift.
 
