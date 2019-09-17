@@ -28,8 +28,8 @@ The source data resides in S3 and needs to be processed in Sparkify's data wareh
 
 ## Project Template:
 - **airflow/list_keys_dag.py:** Listing all keys in S3 bucket. It is the firt look for the datasets we are dealing with. Done detaily at Project 3 - Data warehouse with Redshift.
-- **airflow/plugins/operators/create_table.py:** Custom operator plugins to create the staging and fact/dimension tables in Redshift.
-- **airflow/plugins/operators/create_table.sql:** SQL commands to create the staging and fact/dimension tables. 
+- **airflow/plugins/operators/create_tables.py:** Custom operator plugins to create the staging and fact/dimension tables in Redshift.
+- **airflow/plugins/operators/create_tables.sql:** SQL commands to create the staging and fact/dimension tables. 
 
 ## DAG:
 ![log data](pics/Dag_view_edited.png)
