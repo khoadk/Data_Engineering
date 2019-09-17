@@ -28,7 +28,7 @@ The source data resides in S3 and needs to be processed in Sparkify's data wareh
 
 ## Project Template:
 - **airflow/dags/list_keys_dag.py:** Listing all keys in S3 bucket. It is the firt look for the datasets we are dealing with. Already done detaily at Project 3 - Data warehouse with Redshift.
-- **airflow/dags/sparkify_pipeline_dag:** DAG that do data pipeline/ETL from S3 to Redshift.
+- **airflow/dags/sparkify_pipeline_dag.py:** DAG that do data pipeline/ETL from S3 to Redshift.
 ------------------------------------------------------------------------------------------------------------------------------
 - **airflow/plugins/operators/create_tables.py:** Custom operator plugins to create the staging and fact/dimension tables in Redshift.
 - **airflow/plugins/operators/create_tables.sql:** SQL commands to create the staging and fact/dimension tables. 
@@ -37,6 +37,10 @@ The source data resides in S3 and needs to be processed in Sparkify's data wareh
 - **airflow/plugins/operators/load_fact.py:** Operator plugin to insert data from stagging to fact table.
 - **airflow/plugins/operators/stage_redshift.py:** Operator plugin to copy data from S3 to Redshift.
 - **airflow/plugins/helpers/sql_queries.py:** SQL commands to insert data from staging to fact/dimension tables.
+
+## Instruction:
+- Option: Run **list_keys_dag.py** to take a look at data struccture/ raw data from S3.
+- Run **sparkify_pipeline_dag.py** to do data pipeline/ETL from S3 to Redshift.
 
 ## DAG:
 ![log data](pics/Dag_view_edited.png)
