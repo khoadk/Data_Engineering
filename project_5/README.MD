@@ -32,4 +32,4 @@ The source data resides in S3 and needs to be processed in Sparkify's data wareh
 - **airflow/plugins/operators/create_table.sql:** SQL commands to create the staging and fact/dimension tables. 
 
 ## DAG:
-![log data](pics/example-dag.png)
+![log data](pics/Dag_view_edited.png)
