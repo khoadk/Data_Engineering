@@ -27,7 +27,7 @@ The source data resides in S3 and needs to be processed in Sparkify's data wareh
 >  s3://udacity-dend/song_data/A/Z/Z/TRAZZXH128F933D2BA.json
 
 ## Project Template:
-- **airflow/list_keys_dag.py:** Listing all keys in S3 bucket. It is the firt look for the datasets we are dealing with.
+- **airflow/list_keys_dag.py:** Listing all keys in S3 bucket. It is the firt look for the datasets we are dealing with. Done detaily at Project 3 - Data warehouse with Redshift.
 - **airflow/plugins/operators/create_table.py:** Custom operator plugins to create the staging and fact/dimension tables in Redshift.
 - **airflow/plugins/operators/create_table.sql:** SQL commands to create the staging and fact/dimension tables. 
 
